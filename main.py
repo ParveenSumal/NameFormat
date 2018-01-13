@@ -1,9 +1,13 @@
-name=input("enter the name of person")
+name=input("enter the name of person: ")
 name=name.split()
 leng=len(name)
-lastName=name[leng-1]
+last=name[leng-1]
+last=last.capitalize()
 first=""
-for i in range(0,leng-1,-1):
+for i in range(0,leng-1):
+    temp=""
     temp=name[i]
-    print(temp)
-print
+    temp=temp[0].capitalize()+". "
+    first+=temp
+name=first+" "+last
+print(name)
