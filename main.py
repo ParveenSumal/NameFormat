@@ -1,5 +1,6 @@
-choice=True
+choice="true"
 def main():
+    global choice
     name=input("enter the name of person: ")
     name=name.split()
     leng=len(name)
@@ -13,6 +14,6 @@ def main():
         first+=temp
     name=first+" "+last
     print(name)
-    choice=input("False for exit, Anything else will continue the program\n")
-while(choice!=False):
+    choice=input(" 'no' for exit, Anything else will continue the program: ")
+while(choice!="no"):
     main()
